@@ -6,15 +6,14 @@
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
 public:
+
+	ATankPlayerController();
 	// return a pointer to a ABattleTank,  
 		// ABattleTank* will not be a recognised type
 		// it is a const as it will not change any future member variables of this class
@@ -22,4 +21,8 @@ public:
 	
 	virtual void BeginPlay() override;
 	
+	virtual void Tick( float DeltaSeconds ) override;
+
+	void AimTowardsCrosshair();
+
 };
