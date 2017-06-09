@@ -25,4 +25,12 @@ public:
 
 	void AimTowardsCrosshair();
 
+	void PerformRayCastHit();
+
+	bool GetSightRayHitsLocation(FVector& HitLocation);
+
+private:
+	UInputComponent* InputComponent;
+
+	
 };
